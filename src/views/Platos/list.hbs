@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row mt-5">
+        <h3 class="text-center text-uppercase p-2">LISTA PLATOS DEL MENU</h3>
+        {{#if platos}}
+        <table class="table text-center">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each platos}}
+                <tr class="text-center">
+                    <td>{{nombre}}</td>
+                    <td>{{descripcion}}</td>
+                    <td>{{categoria}}</td>
+                    <td>{{precio}}</td>
+                    <td>{{imagen}}</td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="/edit/{{id}}" class="btn btn-warning p-2">
+                                <i class="fa-solid fa-pencil"></i></a>
+                            <a href="/delete/{{id}}" class="btn btn-danger p-2">
+                                <i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <tfoot>
+                <tr class="table-dark">
+                    <td colspan="6">Platos del Menu</td>
+                </tr>
+            </tfoot>
+        </table>
+        {{else}}
+        <div class="card text-center mx-auto" style="width: 350px;">
+            <div class="card-header">
+                <h3>Debes agregar un plato</h3>
+            </div>
+            <div class="card-body">
+                <p>Presiona este botón para que puedas agregar un nuevo plato en la aplicación</p>
+                <a href="#" class="btn btn-primary">Agregar Plato</a>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>

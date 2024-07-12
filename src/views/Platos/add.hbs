@@ -1,0 +1,43 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">AGREGAR UN PLATO AL MENU</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/add" method="post">
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text">Nombre</label>
+                            <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ejemplo: Pasta Alfredo" required>
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="descripcion" class="input-group-text">Descripción</label>
+                            <input class="form-control" type="text" name="descripcion" id="descripcion" placeholder="Ejemplo: Deliciosa Pasta con salsa alfredo" required>
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="categoria" class="input-group-text">Categoría</label>
+                            <input class="form-control" type="text" name="categoria" id="categoria" placeholder="Ejemplo: Pasta" required>
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="precio" class="input-group-text">Precio</label>
+                            <input class="form-control" type="text" name="precio" id="precio" placeholder="Ejemplo: $9990" required>
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="imagen" class="input-group-text">Imagen</label>
+                            <input class="form-control" type="text" name="imagen" id="imagen">
+                        </div>
+                        
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success"> Crear </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
